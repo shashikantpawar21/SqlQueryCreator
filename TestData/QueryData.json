@@ -1,0 +1,38 @@
+{
+  "queryData": [
+    {
+      "tableName": "Countries",
+      "selectedColumns": ["Name", "Currency", "GDP"],
+      "whereClause": {
+        "comparisonFilters": [
+          {
+            "operator": "Equals",
+            "columnName": "Name",
+            "filterValue": "India",
+            "nextConditionLinkOperator": "AND"
+          },
+          {
+            "operator": "GreaterThan",
+            "columnName": "GDP",
+            "filterValue": "10",
+            "nextConditionLinkOperator": "OR"
+          }
+        ],
+        "rangeFilters": [
+          {
+            "operator": "IN",
+            "columnName": "Name",
+            "filterValues": ["India", "Cayman Islands"],
+            "nextConditionLinkOperator": "AND"
+          },
+          {
+            "operator": "BETWEEN",
+            "columnName": "GPD",
+            "filterValues": ["10", "5"],
+            "nextConditionLinkOperator": ""
+          }
+        ]
+      }
+    }
+  ]
+}

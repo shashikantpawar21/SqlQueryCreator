@@ -1,0 +1,34 @@
+{
+  "queryData": [
+    {
+      "tableName": "Country",
+      "selectedColumns": ["Name"]
+    },
+    {
+      "tableName": "City",
+      "selectedColumns": ["CityName"]
+    },
+    {
+      "tableName": "Beaches",
+      "selectedColumns": ["Name", "Sports"]
+    }
+  ],
+  "join": [
+    {
+      "joinType": "InnerJoin",
+      "fromTable": "Country",
+      "toTable": "City",
+      "fromColumn": "Name",
+      "toColumn": "CountryName",
+      "operator": "Equals"
+    },
+    {
+      "joinType": "LeftJoin",
+      "fromTable": "City",
+      "toTable": "Beaches",
+      "fromColumn": "Name",
+      "toColumn": "CityName",
+      "operator": "Equals"
+    }
+  ]
+}
